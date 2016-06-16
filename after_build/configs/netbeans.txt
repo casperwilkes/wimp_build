@@ -1,0 +1,39 @@
+- Right click on project name
+- Click on Properties
+- Go to Run Configuration in left panel
+- Run As: Remote Web Site(FTP,SFTP)
+- Next to Remote Connection -> click Manage button
+
+--------------
+Name: vbox
+Host Name: 192.168.100.10
+User Name: vagrant
+Password: vagrant
+Private Key File: (path/to/wimp_build)/after_build/ppk_key/vagrant_key.ppk
+Known Hosts File: browse to path where saved (directions below)
+Initial Directory: /c/inetpub/wwwroot/(whatever project your working on)
+-------------------
+
+- Click Test Connection to make sure it configured correctly
+- Click OK
+- Below the Remote Connection setting, there is another one that says Upload Files
+	(This will be how often to choose to upload files)
+- Choose your method (I prefer: On Save)
+- Below Upload Files, there are 2 check boxes
+- Leave preserve remote empty
+- Check Upload Files Directly
+- Click Okay
+
+Now when you save any file in the project, it will automatically be uploaded to your remote connection
+This will work for the staging server too. You just have to configure it and give it a different name. 
+Then you can use the options box to choose where to save files.
+
+----------------------
+KNOWN HOSTS FILE
+This is for ssh purposes. You add it to keep the key response on file as trusted. This will keep
+whatever program from asking over and over whether you trust the source.
+
+To utilize this, browse to wherever you save your nb projects and create an empty file named "known_hosts.txt"
+
+Now, whenever you connect to a new source, your response will be saved here if you want.
+

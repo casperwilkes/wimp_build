@@ -1,0 +1,16 @@
+Session
+	Host Name: 192.168.100.10
+	Port: 22
+	Connection Type: SSH
+	
+Connection
+	- Data
+		Auto-login username: vagrant
+	- SSH
+		- Auth
+			Private key file for authentication: after_build/ppk_key/vagrant_key.ppk
+			
+## Go back to Session
+	Saved Sessions: vagrant
+	Click Save button
+	

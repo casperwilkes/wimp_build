@@ -1,0 +1,1 @@
+CREATE USER 'pma'@'localhost' IDENTIFIED BY 'this1sAn0th3rS3cr3t';
